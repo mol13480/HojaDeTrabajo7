@@ -16,6 +16,8 @@ import java.util.*;
 public class HojaDeTrabajo7 {
     
     
+    
+    
     private static List<HashMap<String,String>> array = new ArrayList<HashMap<String,String>>();
     
     
