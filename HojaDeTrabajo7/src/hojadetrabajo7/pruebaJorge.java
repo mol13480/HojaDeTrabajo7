@@ -63,7 +63,7 @@ public class pruebaJorge {
         
         /*Despues de leer el archivo*/
         /*Se crea un string tokenizer*/
-        System.out.println(linea);
+        //System.out.println(linea);
         StringTokenizer tokens = new StringTokenizer(linea," ");
         
         
@@ -80,7 +80,7 @@ public class pruebaJorge {
             token = tokens.nextToken();
             
             
-            System.out.println("El token actual es: " + token);
+            //System.out.println("El token actual es: " + token);
             /*Si es un caracter de operacion se sacan dos elementos de la pila,
              se almacenan en variables y depues se operan*/
             if ((token.equals("(")) ||(token.equals(")"))|| (token.equals(","))||(token.equals("/")))
