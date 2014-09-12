@@ -22,6 +22,9 @@ public class HojaDeTrabajo7 {
     public static void main(String[] args) {
     pruebaJorge lector= new pruebaJorge();
     lector.leerArchivo();
+    
+    Traductor traductor = new Traductor();
+    traductor.seleccionarArchivo();
         
     }
 }

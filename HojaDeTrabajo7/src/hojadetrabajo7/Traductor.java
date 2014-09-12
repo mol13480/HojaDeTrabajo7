@@ -1,0 +1,68 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package hojadetrabajo7;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.StringTokenizer;
+
+/**
+ *
+ * @author Samuel Urias
+ * Esta clase traduce un texto en un archivo
+ */
+public class Traductor {
+    private String micadena;
+    private FileReader fr; //File reader
+    private BufferedReader br; //BufferedReader
+    
+    public Traductor()
+    {
+        
+    }
+    
+    /**
+     * Abre el archivo que se va a utilizar
+     */
+    public void seleccionarArchivo()
+    {
+        //Sirve para leer el archivo 
+        AbrirJFileChooser abrir = new AbrirJFileChooser();
+        abrir.Abrir();
+        String ruta =abrir.getPath();
+        
+       
+        
+        try 
+        {
+            fr = new FileReader(ruta);
+            br = new BufferedReader(fr);
+            
+            while ((micadena = br.readLine())!=null)
+            {
+                
+                StringTokenizer tokens = new StringTokenizer(micadena," ");    
+        
+                while (tokens.hasMoreTokens())
+                {
+                    String token = tokens.nextToken();
+                    System.out.println(token);
+                }
+                System.out.println(micadena);
+               
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println("Hubo un error leyendo el archivo");
+        }
+            
+        //Separa las palabras del archivo    
+        
+    }
+    
+}
