@@ -44,7 +44,9 @@ public class pruebaJorge {
             while ((micadena = br.readLine())!=null)
             {
                 linea = micadena;
+                String vector[]=linea.split(",");
                 System.out.println(micadena);
+                arbol.addNode(vector[0],vector[1]);
                
             }
           
@@ -64,66 +66,7 @@ public class pruebaJorge {
         /*Despues de leer el archivo*/
         /*Se crea un string tokenizer*/
         //System.out.println(linea);
-        StringTokenizer tokens = new StringTokenizer(linea," ");
-        
-        
-        
-        
-        /*Se revisan los caracteres del archivo uno por uno*/
-        while (tokens.hasMoreTokens())
-        {
-            
-            /*Se almacena el caracter en un string para comprarlo
-             ya sea con un '+' o '-' o '*' o '/'*/
-            String token;
-            
-            token = tokens.nextToken();
-            
-            
-            //System.out.println("El token actual es: " + token);
-            /*Si es un caracter de operacion se sacan dos elementos de la pila,
-             se almacenan en variables y depues se operan*/
-            if ((token.equals("(")) ||(token.equals(")"))|| (token.equals(","))||(token.equals("/")))
-            {
-                
-                  
-                  String spanish="";
-                  String english="";
-                 // operando1 = Integer.parseInt(miStack.pop());
-                  //operando2 = Integer.parseInt(miStack.pop());
-                  
-                  if (token.equals("("))
-                  {
-                      while (token!=","){
-                        token = tokens.nextToken();
-                        if (token!=","){
-                        english+=token;
-                        }
-                      }
-                     
-                  }
-                  else if (token.equals(","))
-                  {
-                      while (token!=")"){
-                        token = tokens.nextToken();
-                        if (token!=")"){
-                        spanish+=token;
-                        }
-                      }
-                  }
-                  else if (token.equals(")"))
-                  {
-                      arbol.addNode(english,spanish);
-                  }
-                  
-            }
-            else 
-            {
-              JOptionPane.showMessageDialog(null, "la cagaste ._.", "Resultado", JOptionPane.INFORMATION_MESSAGE);
-   
-            }
-        }
-        
+      
         
     }
     //metodo para leer el archivo      
