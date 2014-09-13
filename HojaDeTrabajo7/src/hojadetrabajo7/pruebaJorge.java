@@ -22,6 +22,7 @@ public class pruebaJorge {
          /*Declaracion de variables*/
         String micadena = null;
         String linea=null;
+        Node nodo;
         
         
         FileReader fr;
@@ -46,7 +47,14 @@ public class pruebaJorge {
                 linea = micadena;
                 String vector[]=linea.split(",");
                 System.out.println(micadena);
+                //System.out.println("debug1");
                 arbol.addNode(vector[0],vector[1]);
+                //System.out.println("debug2");
+                System.out.println(vector[0]);///esto moi para ver que si separe bien las palabras
+                System.out.println(vector[1]);
+                nodo=arbol.findNode(vector[0]);
+                System.out.println(nodo);
+                //System.out.println("debug3");
                
             }
           

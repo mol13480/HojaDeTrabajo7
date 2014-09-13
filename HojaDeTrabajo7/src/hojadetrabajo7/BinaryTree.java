@@ -151,7 +151,7 @@ public class BinaryTree {
 
 			// If we should search to the left
 
-			if (key.compareTo(focusNode.key)<0) {
+			if (key.compareTo(focusNode.key)>0) {
 
 				// Shift the focus Node to the left child
 
@@ -179,30 +179,3 @@ public class BinaryTree {
 
 }
 
-class Node {
-
-	String key;
-	String name;
-
-	Node leftChild;
-	Node rightChild;
-
-	Node(String key, String name) {
-
-		this.key = key;
-		this.name = name;
-
-	}
-
-	public String toString() {
-
-		return name;
-
-		/*
-		 * return name + " has the key " + key + "\nLeft Child: " + leftChild +
-		 * "\nRight Child: " + rightChild + "\n";
-		 */
-
-	}
-
-}
