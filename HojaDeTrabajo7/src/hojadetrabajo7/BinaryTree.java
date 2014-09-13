@@ -12,8 +12,9 @@ package hojadetrabajo7;
  * Irene Molina
  */
 public class BinaryTree {
-
-	Node root;
+        public static final BinaryTree binarytree = new BinaryTree();
+	
+        Node root;
 
 	public void addNode(String key, String name) {
 
@@ -195,7 +196,7 @@ class Node {
 
 	public String toString() {
 
-		return name + " has the key " + key;
+		return name;
 
 		/*
 		 * return name + " has the key " + key + "\nLeft Child: " + leftChild +

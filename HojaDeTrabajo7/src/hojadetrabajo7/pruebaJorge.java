@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  * @author Jorge
  */
 public class pruebaJorge {
-    BinaryTree arbol= new BinaryTree();
+    BinaryTree arbol=  BinaryTree.binarytree;
     
     public  void leerArchivo(){
     

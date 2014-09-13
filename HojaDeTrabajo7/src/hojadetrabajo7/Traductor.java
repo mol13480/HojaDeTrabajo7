@@ -19,6 +19,10 @@ public class Traductor {
     private String micadena;
     private FileReader fr; //File reader
     private BufferedReader br; //BufferedReader
+    private BinaryTree diccionario = BinaryTree.binarytree;
+    
+    private String eshta;
+    
     
     public Traductor()
     {
@@ -44,6 +48,7 @@ public class Traductor {
             
             while ((micadena = br.readLine())!=null)
             {
+                System.out.println(micadena);
                 
                 StringTokenizer tokens = new StringTokenizer(micadena," ");    
         
@@ -51,8 +56,15 @@ public class Traductor {
                 {
                     String token = tokens.nextToken();
                     System.out.println(token);
+                    
+                    
+                    /*Se buscan las palabras en el arbol*/
+                    System.out.println("--------------");
+                    eshta = diccionario.findNode(token).toString();
+                    System.out.println(eshta);
+                    
                 }
-                System.out.println(micadena);
+                
                
             }
         }
